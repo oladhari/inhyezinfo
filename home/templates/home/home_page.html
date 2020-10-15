@@ -1,31 +1,27 @@
 {% extends "base.html" %}
-{% load static %}
+{% load static wagtailcore_tags wagtailimages_tags %}
 
 {% block body_class %}template-homepage{% endblock %}
 
 {% block content %}
-<!-- <div class="container mx-auto">
-	<section class="flex items-center justify-center h-screen">
-		<h1 class="text-5xl">Django + Tailwind = ❤️</h1>
-	</section>
 
-</div> -->
+{% image page.banner_image fill-900x400 as img %}
 
 <style>
 .bannerFondo{
-        height: 400px;
+        height: 300px;
 }
 </style>
 <div>      
-	<div class="bannerFondo bg-green-800	bg-left-top bg-auto bg-repeat-x" style="background-image: url(./img/continuartl_4.png)">
+	<div class="bannerFondo	bg-cover bg-center" style="background-image: url('{{ img.url }}')">
 	</div>
 
       <div class="-mt-64 ">
-        <div class="w-full text-center">
-          <p class="text-sm tracking-widest text-white">Subtitle</p>
-          <h1 class="font-bold text-5xl text-white">
-              Title
+        <div class="w-full text-center text-white">
+          <h1 class="font-bold text-5xl">
+              {{ page.banner_title}}
           </h1>
+          <p class="text-sm">{{ page.banner_subtitle|richtext }}</p>
       	</div>
             
       </div>

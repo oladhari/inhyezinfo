@@ -14,7 +14,10 @@ class HomePage(Page):
         max_length=100, blank=False, null=True, verbose_name=_("banner title")
     )
     banner_subtitle = RichTextField(
-        features=["bold", "italic"], verbose_name=_("banner subtitle")
+        features=["bold", "italic"],
+        verbose_name=_("banner subtitle"),
+        null=True,
+        blank=False,
     )
     banner_image = models.ForeignKey(
         "wagtailimages.Image",
