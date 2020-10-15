@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+from django.utils.translation import gettext_lazy as _
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
@@ -48,6 +49,7 @@ INSTALLED_APPS = [
     "tailwind",
     "theme",
     "site_settings",
+    "blog",
 ]
 
 MIDDLEWARE = [
@@ -160,3 +162,14 @@ WAGTAIL_SITE_NAME = "newsite"
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 BASE_URL = "http://example.com"
 TAILWIND_APP_NAME = "theme"
+
+CATEGORY_CHOICES = [
+    (0, _("National")),
+    (1, _("International")),
+    (2, _("Divers")),
+    (3, _("Believe it or no")),
+    (4, _("Culture")),
+    (4, _("Opinion and the other opinion")),
+    (4, _("Caricature")),
+    (4, _("Videos")),
+]
