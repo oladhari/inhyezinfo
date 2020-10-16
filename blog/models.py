@@ -20,11 +20,13 @@ class BlogDetailPage(Page):
     )
     description = RichTextField(
         blank=False,
+        null=True,
         verbose_name=_("blog description"),
         features=["h2", "h3", "h4", "h5", "bold", "italic", "ol", "ul", "link"],
     )
     content = RichTextField(
         blank=False,
+        null=True,
         verbose_name=_("blog content"),
     )
     blog_category = models.SmallIntegerField(
