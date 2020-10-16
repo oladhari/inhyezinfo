@@ -7,39 +7,9 @@ from wagtail.core.models import Page
 from wagtail.images.edit_handlers import ImageChooserPanel
 
 
-class BlogListingPage(Page):
-    """Listing page lists all the Blog Detail Pages."""
-
-    template = "blog/blog_listing_page.html"
-
-    custom_title = models.CharField(
-        max_length=100,
-        blank=False,
-        null=False,
-        help_text="Overwrites the default title",
-    )
-
-    content_panels = Page.content_panels + [
-        FieldPanel("custom_title"),
-    ]
-
-    def get_context(self, request, *args, **kwargs):
-        """Adding custom stuff to our context."""
-        context = super().get_context(request, *args, **kwargs)
-        context["posts"] = BlogDetailPage.objects.live().public()
-        return context
-
-
 class BlogDetailPage(Page):
     """Blog detail page."""
 
-    custom_title = models.CharField(
-        max_length=100,
-        blank=False,
-        null=False,
-        help_text="Overwrites the default title",
-        verbose_name=_("blog title"),
-    )
     blog_image = models.ForeignKey(
         "wagtailimages.Image",
         blank=False,
@@ -53,6 +23,10 @@ class BlogDetailPage(Page):
         verbose_name=_("blog description"),
         features=["h2", "h3", "h4", "h5", "bold", "italic", "ol", "ul", "link"],
     )
+    content = RichTextField(
+        blank=False,
+        verbose_name=_("blog content"),
+    )
     blog_category = models.SmallIntegerField(
         choices=settings.CATEGORY_CHOICES,
         blank=False,
@@ -61,8 +35,8 @@ class BlogDetailPage(Page):
     )
 
     content_panels = Page.content_panels + [
-        FieldPanel("custom_title"),
         ImageChooserPanel("blog_image"),
         FieldPanel("description"),
+        FieldPanel("content"),
         FieldPanel("blog_category"),
     ]
