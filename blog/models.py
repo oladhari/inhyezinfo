@@ -18,12 +18,6 @@ class BlogDetailPage(Page):
         on_delete=models.SET_NULL,
         verbose_name=_("blog image"),
     )
-    description = RichTextField(
-        blank=False,
-        null=True,
-        verbose_name=_("blog description"),
-        features=["h2", "h3", "h4", "h5", "bold", "italic", "ol", "ul", "link"],
-    )
     content = RichTextField(
         blank=False,
         null=True,
@@ -38,7 +32,6 @@ class BlogDetailPage(Page):
 
     content_panels = Page.content_panels + [
         ImageChooserPanel("blog_image"),
-        FieldPanel("description"),
         FieldPanel("content"),
         FieldPanel("blog_category"),
     ]

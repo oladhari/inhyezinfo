@@ -170,7 +170,7 @@ CATEGORY_CHOICES = [
     (2, _("Divers")),
     (3, _("Believe it or no")),
     (4, _("Culture")),
-    (4, _("Opinion and the other opinion")),
-    (4, _("Caricature")),
-    (4, _("Videos")),
+    (5, _("Opinion and the other opinion")),
+    (6, _("Caricature")),
+    (7, _("Videos")),
 ]
