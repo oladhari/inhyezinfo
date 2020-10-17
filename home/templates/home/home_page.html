@@ -22,7 +22,11 @@
     <ul class="flex border-b mt-24">
         {% for category in categories%}
         <li class="-mb-px mr-1">
-            <a class="bg-red inline-block border-l border-t border-r rounded-t py-2 px-4 text-white-700 font-semibold" href="#">{{ category }}</a>
+            <form class="col-span-2 md:col-span-4 text-center relative" method="GET" data-drop="wrap">
+            <button id="tab-content" class="bg-red-300 inline-block border-l border-t border-r rounded-t py-2 px-4 text-white-700 font-semibold" onclick="openCategory(event, {{ category }})">{{ category }}</button>
+            <input class="hidden" onchange="this.form.submit()"  name="filter" value="{{ forloop.counter0 }}">
+
+            </form>
         </li>
         <!-- <li class="mr-1">
             <a class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" href="#">Tab</a>
@@ -38,7 +42,7 @@
 </div>
 <div class="mt-8">
     <ul>
-        {% for blog in page.get_children.specific.live %}
+        {% for blog in blogs %}
         <li>
             
             {% image blog.blog_image width-300 height-200 as image %}
@@ -70,3 +74,21 @@
 </div>
 
 {% endblock content %}
+{% block extra_js %}
+    <script>
+    // function openCategory(evt, cityName) {
+    //   var i, tabcontent, tablinks;
+    //   tabcontent = document.getElementsById("tab-content");
+    //   for (i = 0; i < tabcontent.length; i++) {
+    //     tabcontent[i].style.display = "none";
+    //   }
+    //   tablinks = document.getElementsByClassName("tablinks");
+    //   for (i = 0; i < tablinks.length; i++) {
+    //     tablinks[i].className = tablinks[i].className.replace(" active", "");
+    //   }
+    //   document.getElementById(cityName).style.display = "block";
+    //   evt.currentTarget.className += " active";
+    // }
+    </script>
+{% endblock extra_js %}
+

@@ -35,3 +35,12 @@ class BlogDetailPage(Page):
         FieldPanel("content"),
         FieldPanel("blog_category"),
     ]
+
+    def get_context(self, request):
+        context = super().get_context(request)
+        context.update(
+            {
+                "categories": dict(settings.CATEGORY_CHOICES).values(),
+            }
+        )
+        return context

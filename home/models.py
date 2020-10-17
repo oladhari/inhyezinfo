@@ -6,6 +6,8 @@ from wagtail.core.fields import RichTextField
 from wagtail.core.models import Page
 from wagtail.images.edit_handlers import ImageChooserPanel
 
+from blog.models import BlogDetailPage
+
 
 class HomePage(Page):
     max_count = 1
@@ -39,11 +41,28 @@ class HomePage(Page):
         verbose_name = _("alignment")
         verbose_name_plural = _("alignments")
 
+    def filter_blogs(self, request, context, blogs):
+        """
+        Apply filters on clicking on tabs according to categroy
+        """
+        # filter
+        category = request.GET.get("filter", False)
+        if category:
+            return context, blogs.filter(blog_category=category)
+        else:
+            return context, blogs
+
     def get_context(self, request, *args, **kwargs):
         context = super().get_context(request, *args, **kwargs)
+
+        blogs = BlogDetailPage.objects.child_of(self).live()
+        context, filtered_blogs = self.filter_blogs(request, context, blogs)
         context.update(
             {
                 "categories": dict(settings.CATEGORY_CHOICES).values(),
+                "blogs": filtered_blogs,
             }
         )
         return context
+
+    subpage_types = ["blog.BlogDetailPage"]
