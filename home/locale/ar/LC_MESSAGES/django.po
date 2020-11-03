@@ -40,7 +40,7 @@ msgstr ""
 
 #: home/templates/home/home_page.html:65
 msgid "read more"
-msgstr ""
+msgstr "لمعرفة المزيد"
 
 #: home/templates/home/welcome_page.html:6
 msgid "Visit the Wagtail website"
