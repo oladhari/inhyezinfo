@@ -167,10 +167,12 @@ TAILWIND_APP_NAME = "theme"
 CATEGORY_CHOICES = [
     (0, _("National")),
     (1, _("International")),
-    (2, _("Divers")),
-    (3, _("Believe it or no")),
-    (4, _("Culture")),
-    (5, _("Opinion and the other opinion")),
-    (6, _("Caricature")),
-    (7, _("Videos")),
+    (2, _("Sport")),
+    (3, _("Divers")),
+    (4, _("Believe it or no")),
+    (5, _("Culture")),
+    (6, _("Opinion and the other opinion")),
+    (7, _("Caricature")),
+    (8, _("Articles")),
+    (9, _("Videos")),
 ]
