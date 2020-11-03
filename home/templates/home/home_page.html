@@ -21,7 +21,7 @@
 <div>
     <ul class="bg-blue-700 flex mt-24">
         {% for category in categories%}
-        <li class="-mb-px mr-1">
+        <li class="flex-1 mr-2">
             <form class="col-span-2 md:col-span-4 text-center relative" method="GET" data-drop="wrap">
             <button id="tab-content" class=" inline-block py-2 px-4 text-white font-semibold hover:text-black" onclick="openCategory(event, {{ category }})">{{ category }}</button>
             <input class="hidden" onchange="this.form.submit()"  name="filter" value="{{ forloop.counter0 }}">
