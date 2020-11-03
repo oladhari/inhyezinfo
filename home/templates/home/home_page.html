@@ -20,23 +20,16 @@
 
 <div>
     <ul class="bg-blue-700 flex mt-24">
-        {% for category in categories%}
+        {% for category in categories %}
         <li class="flex-1 mr-2">
             <form class="col-span-2 md:col-span-4 text-center relative" method="GET" data-drop="wrap">
-            <button id="tab-content" class=" inline-block py-2 px-4 text-white font-semibold hover:text-black" onclick="openCategory(event, {{ category }})">{{ category }}</button>
+            <a id="tab-content" class=" inline-block py-2 px-4  font-semibold hover:text-black {% if category == categories.forloop.counter0 %}text-black{% else %}text-white{% endif %}" href="?filter={{ forloop.counter0 }}">{{ category }}
+
             <input class="hidden" onchange="this.form.submit()"  name="filter" value="{{ forloop.counter0 }}">
+            </a>
 
             </form>
         </li>
-        <!-- <li class="mr-1">
-            <a class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" href="#">Tab</a>
-        </li>
-        <li class="mr-1">
-            <a class="bg-white inline-block py-2 px-4 text-blue-500 hover:text-blue-800 font-semibold" href="#">Tab</a>
-        </li>
-        <li class="mr-1">
-            <a class="bg-white inline-block py-2 px-4 text-gray-400 font-semibold" href="#">Tab</a>
-        </li> -->
         {% endfor %}
     </ul>
 </div>
