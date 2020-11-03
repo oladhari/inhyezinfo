@@ -27,8 +27,11 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 INSTALLED_APPS = [
     "home",
     "search",
+    "site_settings",
+    "blog",
     "wagtail.contrib.forms",
     "wagtail.contrib.redirects",
+    "wagtail.contrib.settings",
     "wagtail.embeds",
     "wagtail.sites",
     "wagtail.users",
@@ -48,8 +51,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "tailwind",
     "theme",
-    "site_settings",
-    "blog",
 ]
 
 MIDDLEWARE = [
@@ -166,10 +167,12 @@ TAILWIND_APP_NAME = "theme"
 CATEGORY_CHOICES = [
     (0, _("National")),
     (1, _("International")),
-    (2, _("Divers")),
-    (3, _("Believe it or no")),
-    (4, _("Culture")),
-    (4, _("Opinion and the other opinion")),
-    (4, _("Caricature")),
-    (4, _("Videos")),
+    (2, _("Sport")),
+    (3, _("Divers")),
+    (4, _("Believe it or no")),
+    (5, _("Culture")),
+    (6, _("Opinion and the other opinion")),
+    (7, _("Caricature")),
+    (8, _("Articles")),
+    (9, _("Videos")),
 ]
