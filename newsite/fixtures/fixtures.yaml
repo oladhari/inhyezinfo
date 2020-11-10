@@ -1,0 +1,278 @@
+- model: home.homepage
+  pk: 3
+  fields:
+    page_ptr: 3
+    banner_title: ٱنحيآااااز
+    banner_subtitle: <p>لأننا أرقى... ننحاز لما هو أرقى</p>
+    banner_image: 1
+- model: wagtailusers.userprofile
+  pk: 1
+  fields:
+    user: 1
+    submitted_notifications: true
+    approved_notifications: true
+    rejected_notifications: true
+    preferred_language: en
+    current_time_zone: ''
+    avatar: ''
+- model: wagtailimages.image
+  pk: 1
+  fields:
+    collection: 1
+    title: Untitled Design.png
+    file: original_images/Untitled_Design_n05hhuL.png
+    width: 1200
+    height: 628
+    created_at: 2020-11-04 13:43:32.729406+00:00
+    uploaded_by_user: 1
+    focal_point_x: null
+    focal_point_y: null
+    focal_point_width: null
+    focal_point_height: null
+    file_size: 75215
+    file_hash: d6064b87bee0d02e96cf30f636fa769245802b5e
+- model: wagtailimages.rendition
+  pk: 1
+  fields:
+    filter_spec: max-165x165
+    file: images/Untitled_Design_n05hhuL.max-165x165.png
+    width: 165
+    height: 86
+    focal_point_key: ''
+    image: 1
+- model: wagtailimages.rendition
+  pk: 2
+  fields:
+    filter_spec: fill-900x400
+    file: images/Untitled_Design_n05hhuL.2e16d0ba.fill-900x400.png
+    width: 900
+    height: 400
+    focal_point_key: 2e16d0ba
+    image: 1
+- model: wagtailcore.site
+  fields:
+    hostname: localhost
+    port: 80
+    site_name: ''
+    root_page: 3
+    is_default_site: true
+- model: wagtailcore.page
+  pk: 1
+  fields:
+    path: '0001'
+    depth: 1
+    numchild: 1
+    title: Root
+    draft_title: Root
+    slug: root
+    content_type: 1
+    live: true
+    has_unpublished_changes: false
+    url_path: /
+    owner: null
+    seo_title: ''
+    show_in_menus: false
+    search_description: ''
+    go_live_at: null
+    expire_at: null
+    expired: false
+    locked: false
+    locked_at: null
+    locked_by: null
+    first_published_at: null
+    last_published_at: null
+    latest_revision_created_at: null
+    live_revision: null
+- model: wagtailcore.page
+  pk: 3
+  fields:
+    path: '00010001'
+    depth: 2
+    numchild: 0
+    title: Home
+    draft_title: Home
+    slug: home
+    content_type: 4
+    live: true
+    has_unpublished_changes: false
+    url_path: /home/
+    owner: null
+    seo_title: ''
+    show_in_menus: false
+    search_description: ''
+    go_live_at: null
+    expire_at: null
+    expired: false
+    locked: false
+    locked_at: null
+    locked_by: null
+    first_published_at: 2020-11-04 13:43:38.628702+00:00
+    last_published_at: 2020-11-04 13:43:38.628702+00:00
+    latest_revision_created_at: 2020-11-04 13:43:38.476856+00:00
+    live_revision: 1
+- model: wagtailcore.pagerevision
+  pk: 1
+  fields:
+    page: 3
+    submitted_for_moderation: false
+    created_at: 2020-11-04 13:43:38.476856+00:00
+    user: 1
+    content_json: '{"pk": 3, "path": "00010001", "depth": 2, "numchild": 0, "title":
+      "Home", "draft_title": "Home", "slug": "home", "content_type": 4, "live": true,
+      "has_unpublished_changes": false, "url_path": "/home/", "owner": null, "seo_title":
+      "", "show_in_menus": false, "search_description": "", "go_live_at": null, "expire_at":
+      null, "expired": false, "locked": false, "locked_at": null, "locked_by": null,
+      "first_published_at": null, "last_published_at": null, "latest_revision_created_at":
+      null, "live_revision": null, "banner_title": "\u0671\u0646\u062d\u064a\u0622\u0627\u0627\u0627\u0627\u0632",
+      "banner_subtitle": "<p>\u0644\u0623\u0646\u0646\u0627 \u0623\u0631\u0642\u0649...
+      \u0646\u0646\u062d\u0627\u0632 \u0644\u0645\u0627 \u0647\u0648 \u0623\u0631\u0642\u0649</p>",
+      "banner_image": 1}'
+    approved_go_live_at: null
+- model: wagtailcore.grouppagepermission
+  pk: 1
+  fields:
+    group: 1
+    page: 1
+    permission_type: add
+- model: wagtailcore.grouppagepermission
+  pk: 2
+  fields:
+    group: 1
+    page: 1
+    permission_type: edit
+- model: wagtailcore.grouppagepermission
+  pk: 3
+  fields:
+    group: 1
+    page: 1
+    permission_type: publish
+- model: wagtailcore.grouppagepermission
+  pk: 4
+  fields:
+    group: 2
+    page: 1
+    permission_type: add
+- model: wagtailcore.grouppagepermission
+  pk: 5
+  fields:
+    group: 2
+    page: 1
+    permission_type: edit
+- model: wagtailcore.grouppagepermission
+  pk: 6
+  fields:
+    group: 1
+    page: 1
+    permission_type: lock
+- model: wagtailcore.grouppagepermission
+  pk: 7
+  fields:
+    group: 1
+    page: 1
+    permission_type: unlock
+- model: wagtailcore.collection
+  pk: 1
+  fields:
+    path: '0001'
+    depth: 1
+    numchild: 0
+    name: Root
+- model: wagtailcore.workflowpage
+  pk: 1
+  fields:
+    workflow: 1
+- model: wagtailcore.workflowtask
+  pk: 1
+  fields:
+    sort_order: 0
+    workflow: 1
+    task: 1
+- model: wagtailcore.task
+  pk: 1
+  fields:
+    name: Moderators approval
+    content_type: 3
+    active: true
+- model: wagtailcore.workflow
+  pk: 1
+  fields:
+    name: Moderators approval
+    active: true
+- model: wagtailcore.groupapprovaltask
+  pk: 1
+  fields:
+    task_ptr: 1
+    groups:
+    - 1
+- model: wagtailcore.pagelogentry
+  pk: 1
+  fields:
+    content_type: 4
+    label: Home
+    action: wagtail.edit
+    data_json: '""'
+    timestamp: 2020-11-04 13:43:38.577764+00:00
+    user: 1
+    content_changed: true
+    deleted: false
+    page: 3
+    revision: 1
+- model: wagtailcore.pagelogentry
+  pk: 2
+  fields:
+    content_type: 4
+    label: Home
+    action: wagtail.publish
+    data_json: 'null'
+    timestamp: 2020-11-04 13:43:38.798669+00:00
+    user: 1
+    content_changed: true
+    deleted: false
+    page: 3
+    revision: 1
+- model: auth.group
+  fields:
+    name: Moderators
+    permissions:
+    - 4
+    - 5
+    - 6
+    - 7
+    - 1
+    - 2
+    - 3
+- model: auth.group
+  fields:
+    name: Editors
+    permissions:
+    - 4
+    - 5
+    - 6
+    - 7
+    - 1
+    - 2
+    - 3
+- model: auth.user
+  fields:
+    password: pbkdf2_sha256$216000$Jl7Uzcjp5mhG$j7N/8CcUhOaRr7Ikn/7/ghcvkbdnYMM0b7VwdykC/sU=
+    last_login: 2020-11-07 13:26:00.026697+00:00
+    is_superuser: true
+    username: oladhari
+    first_name: ''
+    last_name: ''
+    email: oussama.ladhari@gmail.com
+    is_staff: true
+    is_active: true
+    date_joined: 2020-11-04 13:33:57.510480+00:00
+    groups: []
+    user_permissions: []
+- model: sessions.session
+  pk: oc872avlq4bt1843l7hwradd8n95bzqo
+  fields:
+    session_data: .eJxVjEEOwiAQRe_C2hAqUAaX7nsGMswMUjVtUtqV8e7apAvd_vfef6mE21rT1mRJI6uL6tTpd8tID5l2wHecbrOmeVqXMetd0QdtephZntfD_Tuo2Oq3Dkxo-g6teIldIQMEYJ317ItlIDbMYjEACWcHIfMZHJbeRxdjQFTvD_8MOKc:1kbOEC:TQAE7SDy7PDVJsNHq8Klvh-MmsMqSY-GPZv293pwUaw
+    expire_date: 2020-11-21 13:26:00.147202+00:00
+- model: sessions.session
+  pk: wqvfpe064ek08bbvsmu5nr1m5rfn4e8c
+  fields:
+    session_data: .eJxVjEEOwiAQRe_C2hAqUAaX7nsGMswMUjVtUtqV8e7apAvd_vfef6mE21rT1mRJI6uL6tTpd8tID5l2wHecbrOmeVqXMetd0QdtephZntfD_Tuo2Oq3Dkxo-g6teIldIQMEYJ317ItlIDbMYjEACWcHIfMZHJbeRxdjQFTvD_8MOKc:1kaIvO:7k-Ctrm7FNR-3kJGXcRM_KPp-PRfxVvJzPxQ0bnq-w0
+    expire_date: 2020-11-18 13:34:06.613001+00:00
