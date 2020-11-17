@@ -31,7 +31,10 @@
     <body class="{% block body_class %}{% endblock %}">
         {% wagtailuserbar %}
 
+        {% block header %}{% endblock %}
         {% block content %}{% endblock %}
+        {% block footer %}{% endblock %}
+
 
         {# Global javascript #}
         <script type="text/javascript" src="{% static 'js/newsite.js' %}"></script>

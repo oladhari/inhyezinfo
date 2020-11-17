@@ -38,7 +38,6 @@ class BlogDetailPage(Page):
 
     def get_context(self, request):
         context = super().get_context(request)
-        breakpoint()
         context.update(
             {
                 "categories": dict(settings.CATEGORY_CHOICES).values(),

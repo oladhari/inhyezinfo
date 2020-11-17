@@ -43,7 +43,7 @@ class HomePage(Page):
 
     def filter_blogs(self, request, context, blogs):
         """
-        Apply filters on clicking on tabs according to categroy
+        Apply filters on clicking on tabs according to category
         """
         # filter
         category = request.GET.get("filter", False)
